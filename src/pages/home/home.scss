@@ -1,0 +1,46 @@
+page-home {
+
+}
+
+.circle{
+       /* margin: 10%; */
+       width: 36%;
+       height: 77%;
+       /* background: red; */
+       text-align: center;
+       border-radius: 66%;
+       border: 10px solid gainsboro;
+       margin-left: 23%;
+       margin-top: 11px;
+       padding-top: 10%;
+       float: left;
+       text-align: center;
+       font-size: 31px;
+       color: gainsboro;
+}
+
+.square-first{
+    width:100%;height:30%;background-color:#c1b9ea
+}
+
+.square{
+    width:100%;height:30%;background-color:#c1b9ea;margin-top: 5%;
+}
+.desc-text{
+    left: initial;
+    width: 100%;
+    font-size: 20px;
+    color: gainsboro;
+    padding-top: 17px;
+}
+
+.notification-count-container{
+    border: 1px solid gainsboro;
+    padding: 4px;
+    border-radius: 15px;
+    color: white;
+    background: black;
+    position: absolute;
+    top: -9px;
+    right: -13px;
+}

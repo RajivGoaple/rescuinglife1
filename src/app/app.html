@@ -1,0 +1,30 @@
+<ion-menu [content]="content">
+        <!-- <ion-header>
+          <ion-toolbar>
+            <ion-title>Menu</ion-title>
+          </ion-toolbar>
+        </ion-header> -->
+        <ion-content>
+          <ion-list>
+            <button ion-item (click)="goToHome()" menuClose>
+                <ion-icon name="home"></ion-icon>  <span class="menu-title">Home</span>
+            </button>
+            <button ion-item (click)="goToUploadList()" menuClose>
+                <ion-icon name="cloud-upload"></ion-icon>
+                <span class="menu-title">Uploads</span>
+              
+            </button>
+            <button ion-item (click)="goToSearchPage()" menuClose>
+                <ion-icon name="search"></ion-icon>
+                <span class="menu-title">Search</span>
+              
+            </button>
+            <button ion-item (click)="goToHome()" menuClose>
+                <ion-icon name="settings"></ion-icon>
+                <span class="menu-title">Setting</span>
+              
+            </button>
+          </ion-list>
+        </ion-content>
+      </ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>

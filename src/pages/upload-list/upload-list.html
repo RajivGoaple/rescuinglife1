@@ -1,0 +1,146 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+      <ion-title>Uploaded Items</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="outer-content">
+    <ion-list>
+      <ion-list-header>
+       Food
+      </ion-list-header>
+  
+      <ion-item-sliding>
+        <ion-item (click)="showDetails()">
+          <ion-avatar item-start>
+            <img src="assets/imgs/venkman.jpg">
+          </ion-avatar>
+          <h2>Hadpsar</h2>
+          <p>20 KG Biryani Rice, Till 3PM.</p>
+        </ion-item>
+        <ion-item-options>
+            <button ion-button color="primary" icon-start>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              Accept
+            </button>
+            <button ion-button color="secondary" icon-start>
+                <ion-icon name="close-circle"></ion-icon>
+              Decline
+            </button> 
+        </ion-item-options>
+      </ion-item-sliding>
+  
+  
+      <ion-item-sliding>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/barrett.jpg">
+          </ion-avatar>
+          <h2>PUNE</h2>
+          <p>10 KG Biryani Rice, Till 3PM.</p>
+        </ion-item>
+        <ion-item-options>
+            <button ion-button color="primary" icon-start>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              Accept
+            </button>
+            <button ion-button color="secondary" icon-start>
+                <ion-icon name="close-circle"></ion-icon>
+              Decline
+            </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+  
+    <ion-list>
+      <ion-list-header>
+        Cloths
+      </ion-list-header>
+  
+      <ion-item-sliding>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="assets/imgs/venkman.jpg">
+          </ion-avatar>
+          <h2>100 Shirts</h2>
+          <p>Near Swarget</p>
+        </ion-item>
+        <ion-item-options> 
+            <button ion-button color="primary" icon-start>
+                <ion-icon name="checkmark-circle"></ion-icon>
+              Accept
+            </button>
+            <button ion-button color="secondary" icon-start>
+                <ion-icon name="close-circle"></ion-icon>
+              Decline
+            </button>
+        </ion-item-options>
+      </ion-item-sliding>
+  
+      <ion-item-sliding>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/imgs/venkman.jpg">
+            </ion-avatar>
+            <h2>Sweat Shirts to Donate</h2>
+            <p>Near Nigadi</p>
+          </ion-item>
+          <ion-item-options> 
+              <button ion-button color="primary" icon-start>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                Accept
+              </button>
+              <button ion-button color="secondary" icon-start>
+                  <ion-icon name="close-circle"></ion-icon>
+                Decline
+              </button>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item-sliding>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="assets/imgs/venkman.jpg">
+              </ion-avatar>
+              <h2>T-Shirts</h2>
+              <p>Malwadi</p>
+            </ion-item>
+            <ion-item-options> 
+                <button ion-button color="primary" icon-start>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                  Accept
+                </button>
+                <button ion-button color="secondary" icon-start>
+                    <ion-icon name="close-circle"></ion-icon>
+                  Decline
+                </button>
+            </ion-item-options>
+          </ion-item-sliding>
+          <ion-item-sliding>
+              <ion-item>
+                <ion-avatar item-start>
+                  <img src="assets/imgs/venkman.jpg">
+                </ion-avatar>
+                <h2>20 Formal Shoes</h2>
+                <p>Near Gadital, Hadpsar</p>
+              </ion-item>
+              <ion-item-options> 
+                  <button ion-button color="primary" icon-start>
+                      <ion-icon name="checkmark-circle"></ion-icon>
+                    Accept
+                  </button>
+                  <button ion-button color="secondary" icon-start>
+                      <ion-icon name="close-circle"></ion-icon>
+                    Decline
+                  </button>
+              </ion-item-options>
+            </ion-item-sliding>
+              
+    </ion-list>
+  
+  </ion-content>
