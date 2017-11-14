@@ -18,6 +18,8 @@ import {UploadDetailsPage} from '../pages/upload-details/upload-details'
 
 import {SearchPage} from '../pages/search/search'
 
+import {UploadItemPage} from '../pages/upload-item/upload-item'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +29,8 @@ import {SearchPage} from '../pages/search/search'
     OtpValidationPage,
     UploadListPage,
     UploadDetailsPage,
-    SearchPage
+    SearchPage,
+    UploadItemPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import {SearchPage} from '../pages/search/search'
     RegisterPage,OtpValidationPage,
     UploadListPage,
     UploadDetailsPage,
-    SearchPage
+    SearchPage,
+    UploadItemPage
   ],
   providers: [
     StatusBar,

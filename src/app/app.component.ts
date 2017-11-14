@@ -10,11 +10,12 @@ import {UploadListPage} from '../pages/upload-list/upload-list'
 import {UploadDetailsPage} from '../pages/upload-details/upload-details'
 
 import {SearchPage} from '../pages/search/search' 
+import {UploadItemPage} from '../pages/upload-item/upload-item'
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = SearchPage;
+  rootPage:any = HomePage;
 @ViewChild(Nav) nav:Nav;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -40,5 +41,7 @@ export class MyApp {
     this.nav.push(SearchPage);
   }
 
-
+ public goToUploadItem(){
+    this.nav.push(UploadItemPage);
+ }
 }
