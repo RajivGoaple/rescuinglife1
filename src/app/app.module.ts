@@ -18,7 +18,9 @@ import {UploadDetailsPage} from '../pages/upload-details/upload-details'
 
 import {SearchPage} from '../pages/search/search'
 
-import {UploadItemPage} from '../pages/upload-item/upload-item'
+import {UploadItemPage} from '../pages/upload-item/upload-item' 
+// import { Storage } from '@ionic/storage'; 
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import {UploadItemPage} from '../pages/upload-item/upload-item'
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,6 +53,7 @@ import {UploadItemPage} from '../pages/upload-item/upload-item'
   providers: [
     StatusBar,
     SplashScreen,
+    Storage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

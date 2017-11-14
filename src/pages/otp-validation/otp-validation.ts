@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
-
+import { Storage } from '@ionic/storage';
 import { HomePage } from '../home/home';
 /**
  * Generated class for the OtpValidationPage page.
@@ -18,7 +18,7 @@ import { HomePage } from '../home/home';
 export class OtpValidationPage {
 public otp:any;
 public mobileNumber;
-  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController,public storage: Storage) {
     this.mobileNumber=navParams.data;
   }
 
@@ -36,7 +36,8 @@ public mobileNumber;
 
   public validateOTP(){
    if(this.otp=="1234"){
-this.navCtrl.push(HomePage);
+     this.storage.set("otpVerified","true");
+     this.navCtrl.push(HomePage);
    }
    else{ 
     this.presentToast("Invalid OTP!!",10000)
