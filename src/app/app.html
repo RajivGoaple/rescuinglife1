@@ -12,24 +12,38 @@
             <button ion-item (click)="goToHome()" menuClose>
                 <ion-icon name="home"></ion-icon>  <span class="menu-title">Home</span>
             </button>
-            <button ion-item (click)="goToUploadList()" menuClose>
+            <button *ngIf="type=='ngo'" ion-item (click)="goToUploadList()" menuClose>
                 <ion-icon name="cloud-upload"></ion-icon>
-                <span class="menu-title">Uploads</span>
+                <span class="menu-title">Available Items</span>
+                <span class="notification-count">10</span>
               
             </button>
-            <button ion-item (click)="goToSearchPage()" menuClose>
+            <button *ngIf="type=='ngo'" ion-item (click)="goToAcceptedList()" menuClose>
+                <ion-icon name="cloud-upload"></ion-icon>
+                <span class="menu-title">Accepted Items</span>
+                <span class="notification-count">02</span>
+              
+            </button>
+
+            <button *ngIf="type=='user'" ion-item (click)="goToAcceptedList()" menuClose>
+                <ion-icon name="cloud-upload"></ion-icon>
+                <span class="menu-title">My Items</span>
+                <span class="notification-count">02</span>   
+            </button>
+
+            <button *ngIf="type=='user'" ion-item (click)="goToSearchPage()" menuClose>
                 <ion-icon name="search"></ion-icon>
                 <span class="menu-title">Search</span>
               
             </button>
-            <button ion-item (click)="goToUploadItem()" menuClose>
+            <button *ngIf="type=='user'" ion-item (click)="goToUploadItem()" menuClose>
                 <ion-icon name="cloud-upload"></ion-icon>
                 <span class="menu-title">Upload Item</span>
               
             </button>
-            <button ion-item (click)="goToHome()" menuClose>
+            <button ion-item (click)="goToManageProfile()" menuClose>
                 <ion-icon name="settings"></ion-icon>
-                <span class="menu-title">Setting</span>
+                <span class="menu-title">Manage Profile</span>
               
             </button>
           </ion-list>

@@ -18,3 +18,18 @@
 .menu-title{
     margin-left: 10px;
 }
+
+.notification-count{
+    border: 1px solid gainsboro;
+    padding: 5px;
+    border-radius: 22px;
+    color: white;
+    background: black;
+    position: absolute;
+    /* top: -9px; */
+    /* right: -13px; */
+    margin-left: 15px;
+    font-size: 12px;
+    text-align: center;
+}
+

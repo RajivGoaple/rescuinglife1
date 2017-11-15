@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
-import { HomePage } from '../home/home';
+import { HomePage } from '../home/home'; 
+import { User } from '../../Models/User';
 /**
  * Generated class for the OtpValidationPage page.
  *
@@ -17,9 +18,9 @@ import { HomePage } from '../home/home';
 })
 export class OtpValidationPage {
 public otp:any;
-public mobileNumber;
+public user:User;
   constructor(public navCtrl: NavController, public navParams: NavParams,public toastCtrl: ToastController,public storage: Storage) {
-    this.mobileNumber=navParams.data;
+    this.user=navParams.data;
   }
 
  public presentToast(msg:string,duration:number) {
@@ -37,7 +38,17 @@ public mobileNumber;
   public validateOTP(){
    if(this.otp=="1234"){
      this.storage.set("otpVerified","true");
+     this.storage.set("FirstName",this.user.FirstName);
+     this.storage.set("LastName",this.user.LastName);
+     this.storage.set("Email",this.user.Email);
+     this.storage.set("Mobile",this.user.Mobile);
+     this.storage.set("Address",this.user.Address);
+     this.storage.set("PrefferedLocation",this.user.PrefferedLocation);
+     this.storage.set("Type",this.user.Type);
+     this.storage.set("OrgnizationName",this.user.OrgnizationName);
+     this.storage.set("AboutOrgnization",this.user.AboutOrgnization);
      this.navCtrl.push(HomePage);
+
    }
    else{ 
     this.presentToast("Invalid OTP!!",10000)

@@ -16,7 +16,7 @@
     <ion-col></ion-col>
   </ion-row> -->
 
-  <p class="note">OTP has been sent on your mobile number <b> {{mobileNumber}}</b>, Please validate</p>
+  <p class="note">OTP has been sent on your mobile number <b> {{user.mobileNumber}}</b>, Please validate</p>
   <div class="login-box">
     <form (ngSubmit)="validateOTP()" #registerForm="ngForm">
       <ion-row>

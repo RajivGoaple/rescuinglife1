@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AcceptedItemsPage } from '../accepted-items/accepted-items';
 
 /**
  * Generated class for the UploadDetailsPage page.
@@ -20,6 +21,11 @@ export class UploadDetailsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad UploadDetailsPage');
+  }
+
+  
+  public acceptItem(){
+    this.navCtrl.setRoot(AcceptedItemsPage);
   }
 
 }

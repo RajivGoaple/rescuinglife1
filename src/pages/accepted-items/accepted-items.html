@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons left>
+            <button ion-button icon-only menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+      <ion-title>Accepted Items</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content class="outer-content">
+    <ion-list>
+      <!-- <ion-list-header>
+       Food
+      </ion-list-header> -->
+  
+      <ion-item-sliding>
+          <ion-item (click)="showDetails()">
+            <ion-avatar item-start>
+              <img src="assets/imgs/venkman.jpg">
+            </ion-avatar>
+            <h2>Purvi Shah</h2>
+            <p>Food | Koregaon Park | 15th Nov 2017</p>
+            <p> <b>Desc: </b>Breads</p>
+            <div>
+                <img class="veg-non-icon" src="assets/imgs/veg_icon.png"/>
+              </div>
+          </ion-item>
+          <ion-item-options>
+              <button ion-button color="primary" icon-start>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                Accept
+              </button> 
+          </ion-item-options>
+        </ion-item-sliding>
+
+      
+       
+        <ion-item-sliding>
+            <ion-item (click)="showDetails()">
+              <ion-avatar item-start>
+                <img src="assets/imgs/barrett.jpg">
+              </ion-avatar>
+              <h2>Prashant Sable</h2>
+              <p>Clothes | Nigdi | 12th Nov 2017</p>
+              <p> <b>Desc: </b>20 Formal Shirts</p>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="primary" icon-start>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                  Decline
+                </button> 
+            </ion-item-options>
+          </ion-item-sliding>
+  
+          
+    </ion-list>
+  
+  </ion-content>

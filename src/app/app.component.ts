@@ -12,11 +12,16 @@ import {UploadDetailsPage} from '../pages/upload-details/upload-details'
 
 import {SearchPage} from '../pages/search/search' 
 import {UploadItemPage} from '../pages/upload-item/upload-item'
+
+import {AcceptedItemsPage} from '../pages/accepted-items/accepted-items'
+
+import{ManageProfilePage} from '../pages/manage-profile/manage-profile'
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   rootPage:any = LoginPage;
+  type:string="user";
 @ViewChild(Nav) nav:Nav;
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,public storage:Storage) {
     platform.ready().then(() => {
@@ -30,6 +35,10 @@ export class MyApp {
                                                     if(otpVerfied=="true"){ 
                                                       this.rootPage = HomePage;
                                                     }
+                                                  });
+
+                                                  this.storage.get("Type").then((val)=>{  
+                                                    this.type=val;
                                                   });
      
     });
@@ -47,10 +56,19 @@ export class MyApp {
   }
 
   public goToSearchPage(){
-    this.nav.push(SearchPage);
+    this.nav.setRoot(SearchPage);
   }
 
  public goToUploadItem(){
-    this.nav.push(UploadItemPage);
+    this.nav.setRoot(UploadItemPage);
  }
+
+ public goToAcceptedList(){
+   this.nav.setRoot(AcceptedItemsPage);
+ }
+
+ public goToManageProfile(){
+  this.nav.setRoot(ManageProfilePage);
+}
+
 }

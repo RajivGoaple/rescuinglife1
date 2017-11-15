@@ -5,8 +5,14 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+ 
 
   <ion-navbar>
+      <ion-buttons left>
+          <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </ion-buttons>
     <ion-title>Upload Item</ion-title>
   </ion-navbar>
 
@@ -14,5 +20,68 @@
 
 
 <ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label color="primary">Uploading By :</ion-label>
+          <ion-input placeholder="Person Name" [(ngModel)]="firstName"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label color="primary" fixed>Contact No:</ion-label>
+          <ion-input type="tel" placeholder="Mobile Number" [(ngModel)]="mobileNumber"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+            <!-- <ion-input placeholder="First Name"></ion-input> -->
+            <ion-label color="primary">Category : </ion-label>
+             <ion-select [(ngModel)]="category">
+               <ion-option value="user" selected>Food</ion-option>
+               <ion-option value="ngo">Clothes</ion-option>
+             </ion-select>
+          </ion-item>
+
+
+        <ion-item>
+            <!-- <ion-input placeholder="First Name"></ion-input> -->
+            <ion-label color="primary">Sub Category : </ion-label>
+             <ion-select [(ngModel)]="category">
+               <ion-option value="user" selected>Veg</ion-option>
+               <ion-option value="ngo">Non-Veg</ion-option>
+             </ion-select>
+          </ion-item>
+
+        <ion-item>
+          <ion-input type="number" placeholder="Something About Items"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+            <ion-label>Availble Date</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="dt"></ion-datetime>
+          </ion-item>
+      
+      
+          <ion-item>
+            <ion-label>Available Time</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="tm"></ion-datetime>
+          </ion-item>
+
+               
+      <ion-item>
+          <button ion-button >
+              <ion-icon name="cloud-upload"></ion-icon>
+              Upload Images
+            </button>  
+      
+      </ion-item>
+        <ion-item>
+          <ion-label color="primary" floating>Collection Address</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+<ion-item>
+    <button (click)="upload()" ion-button large style="width:100%">Upload 
+      item
+    </button>
+</ion-item>
+      </ion-list>
 
 </ion-content>

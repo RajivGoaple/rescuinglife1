@@ -21,6 +21,8 @@ import {SearchPage} from '../pages/search/search'
 import {UploadItemPage} from '../pages/upload-item/upload-item' 
 // import { Storage } from '@ionic/storage'; 
 import { IonicStorageModule } from '@ionic/storage';
+import {AcceptedItemsPage} from '../pages/accepted-items/accepted-items'
+import{ManageProfilePage} from '../pages/manage-profile/manage-profile'
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { IonicStorageModule } from '@ionic/storage';
     UploadListPage,
     UploadDetailsPage,
     SearchPage,
-    UploadItemPage
+    UploadItemPage,
+    AcceptedItemsPage,
+    ManageProfilePage
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,9 @@ import { IonicStorageModule } from '@ionic/storage';
     UploadListPage,
     UploadDetailsPage,
     SearchPage,
-    UploadItemPage
+    UploadItemPage,
+    AcceptedItemsPage,
+    ManageProfilePage
   ],
   providers: [
     StatusBar,

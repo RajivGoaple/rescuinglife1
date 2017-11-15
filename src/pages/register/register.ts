@@ -20,13 +20,14 @@ export class RegisterPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   this.user=new User();
+  this.user.Type="user";
   if(navParams!=null && navParams.data!="")
   { 
     this.user.Mobile=navParams.data;
   }
   }
 public register(){
-  this.navCtrl.push(OtpValidationPage,this.user.Mobile)
+  this.navCtrl.push(OtpValidationPage,this.user)
 }
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');

@@ -5,7 +5,7 @@
               <ion-icon name="menu"></ion-icon>
             </button>
           </ion-buttons>
-      <ion-title>Uploaded Items</ion-title>
+      <ion-title>Availble Items</ion-title>
     </ion-navbar>
   </ion-header>
   
@@ -20,127 +20,162 @@
           <ion-avatar item-start>
             <img src="assets/imgs/venkman.jpg">
           </ion-avatar>
-          <h2>Hadpsar</h2>
-          <p>20 KG Biryani Rice, Till 3PM.</p>
+          <h2>Amol Navale</h2>
+          <p>Food | Hadapsar | 15th Nov 2017</p>
+          <p> <b>Desc: </b>10 KG Chicken Biryani</p>
+          <div>
+              <img class="veg-non-icon"src="assets/imgs/nonveg_icon.png"/>
+            </div>
         </ion-item>
         <ion-item-options>
-            <button ion-button color="primary" icon-start>
+            <button ion-button color="primary" (click)="acceptItem()" icon-start>
                 <ion-icon name="checkmark-circle"></ion-icon>
               Accept
             </button>
-            <button ion-button color="secondary" icon-start>
-                <ion-icon name="close-circle"></ion-icon>
-              Decline
-            </button> 
         </ion-item-options>
       </ion-item-sliding>
-  
-  
+
       <ion-item-sliding>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="assets/imgs/barrett.jpg">
-          </ion-avatar>
-          <h2>PUNE</h2>
-          <p>10 KG Biryani Rice, Till 3PM.</p>
-        </ion-item>
-        <ion-item-options>
-            <button ion-button color="primary" icon-start>
-                <ion-icon name="checkmark-circle"></ion-icon>
-              Accept
-            </button>
-            <button ion-button color="secondary" icon-start>
-                <ion-icon name="close-circle"></ion-icon>
-              Decline
-            </button>
-        </ion-item-options>
-      </ion-item-sliding>
+          <ion-item (click)="showDetails()">
+            <ion-avatar item-start>
+              <img src="assets/imgs/barrett.jpg">
+            </ion-avatar>
+            <h2>Prashant Sable</h2>
+            <p>Food | Nigdi | 15th Nov 2017</p>
+            <p> <b>Desc: </b>100 Chapati, Bhaji</p>
+            <div>
+              <img class="veg-non-icon" src="assets/imgs/veg_icon.png"/>
+            </div>
+          </ion-item>
+          <ion-item-options>
+              <button ion-button color="primary" icon-start>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                Accept
+              </button> 
+          </ion-item-options>
+        </ion-item-sliding>
+
+        
+      <ion-item-sliding>
+          <ion-item (click)="showDetails()">
+            <ion-avatar item-start>
+              <img src="assets/imgs/venkman.jpg">
+            </ion-avatar>
+            <h2>Sachin T</h2>
+            <p>Food | Sinhgad road | 15th Nov 2017</p>
+            <p> <b>Desc: </b>White Rice ,Daal</p>
+            <div>
+                <img class="veg-non-icon" src="assets/imgs/veg_icon.png"/>
+              </div>
+          </ion-item>
+          <ion-item-options>
+              <button ion-button color="primary" icon-start>
+                  <ion-icon name="checkmark-circle"></ion-icon>
+                Accept
+              </button>
+          </ion-item-options>
+        </ion-item-sliding>
+
+  
+  
+        <ion-item-sliding>
+            <ion-item (click)="showDetails()">
+              <ion-avatar item-start>
+                <img src="assets/imgs/barrett.jpg">
+              </ion-avatar>
+              <h2>Purvi Shah</h2>
+              <p>Food | Koregaon Park | 15th Nov 2017</p>
+              <p> <b>Desc: </b>Breads</p>
+              <div>
+                  <img class="veg-non-icon" src="assets/imgs/veg_icon.png"/>
+                </div>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="primary" icon-start>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                  Accept
+                </button> 
+            </ion-item-options>
+          </ion-item-sliding>
+  
 
     </ion-list>
   
     <ion-list>
       <ion-list-header>
-        Cloths
+          Clothes
       </ion-list-header>
-  
       <ion-item-sliding>
-        <ion-item>
-          <ion-avatar item-start>
-            <img src="assets/imgs/venkman.jpg">
-          </ion-avatar>
-          <h2>100 Shirts</h2>
-          <p>Near Swarget</p>
-        </ion-item>
-        <ion-item-options> 
-            <button ion-button color="primary" icon-start>
-                <ion-icon name="checkmark-circle"></ion-icon>
-              Accept
-            </button>
-            <button ion-button color="secondary" icon-start>
-                <ion-icon name="close-circle"></ion-icon>
-              Decline
-            </button>
-        </ion-item-options>
-      </ion-item-sliding>
-  
-      <ion-item-sliding>
-          <ion-item>
+          <ion-item (click)="showDetails()">
             <ion-avatar item-start>
               <img src="assets/imgs/venkman.jpg">
             </ion-avatar>
-            <h2>Sweat Shirts to Donate</h2>
-            <p>Near Nigadi</p>
+            <h2>Amol Navale</h2>
+            <p>Clothes | Hadapsar | 13th Nov 2017</p>
+            <p> <b>Desc: </b>3 Shirts,10 Pants</p>
           </ion-item>
-          <ion-item-options> 
+          <ion-item-options>
               <button ion-button color="primary" icon-start>
                   <ion-icon name="checkmark-circle"></ion-icon>
                 Accept
               </button>
-              <button ion-button color="secondary" icon-start>
-                  <ion-icon name="close-circle"></ion-icon>
-                Decline
-              </button>
           </ion-item-options>
         </ion-item-sliding>
+  
         <ion-item-sliding>
-            <ion-item>
+            <ion-item (click)="showDetails()">
+              <ion-avatar item-start>
+                <img src="assets/imgs/barrett.jpg">
+              </ion-avatar>
+              <h2>Prashant Sable</h2>
+              <p>Clothes | Nigdi | 12th Nov 2017</p>
+              <p> <b>Desc: </b>20 Formal Shirts</p>
+            </ion-item>
+            <ion-item-options>
+                <button ion-button color="primary" icon-start>
+                    <ion-icon name="checkmark-circle"></ion-icon>
+                  Accept
+                </button> 
+            </ion-item-options>
+          </ion-item-sliding>
+  
+          
+        <ion-item-sliding>
+            <ion-item (click)="showDetails()">
               <ion-avatar item-start>
                 <img src="assets/imgs/venkman.jpg">
               </ion-avatar>
-              <h2>T-Shirts</h2>
-              <p>Malwadi</p>
+              <h2>Sachin T</h2>
+              <p>Footwear | Sinhgad road | 15th Nov 2017</p>
+              <p> <b>Desc: </b>Shoes </p>
             </ion-item>
-            <ion-item-options> 
+            <ion-item-options>
                 <button ion-button color="primary" icon-start>
                     <ion-icon name="checkmark-circle"></ion-icon>
                   Accept
                 </button>
-                <button ion-button color="secondary" icon-start>
-                    <ion-icon name="close-circle"></ion-icon>
-                  Decline
-                </button>
             </ion-item-options>
           </ion-item-sliding>
+  
+    
+    
           <ion-item-sliding>
-              <ion-item>
+              <ion-item (click)="showDetails()">
                 <ion-avatar item-start>
-                  <img src="assets/imgs/venkman.jpg">
+                  <img src="assets/imgs/barrett.jpg">
                 </ion-avatar>
-                <h2>20 Formal Shoes</h2>
-                <p>Near Gadital, Hadpsar</p>
+                <h2>Purvi Shah</h2>
+                <p>Clothes | Koregaon Park | 15th Nov 2017</p>
+                <p> <b>Desc: </b>10 Kurtis</p>
               </ion-item>
-              <ion-item-options> 
+              <ion-item-options>
                   <button ion-button color="primary" icon-start>
                       <ion-icon name="checkmark-circle"></ion-icon>
                     Accept
-                  </button>
-                  <button ion-button color="secondary" icon-start>
-                      <ion-icon name="close-circle"></ion-icon>
-                    Decline
-                  </button>
+                  </button> 
               </ion-item-options>
             </ion-item-sliding>
-              
+    
     </ion-list>
   
   </ion-content>

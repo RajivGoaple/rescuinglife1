@@ -1,6 +1,6 @@
 <ion-header>
     <ion-navbar>
-      <ion-title>Hadpsar - Cloths</ion-title>
+      <ion-title>Amol Navale</ion-title>
     </ion-navbar>
   </ion-header>
   
@@ -25,8 +25,9 @@
   
       <ion-card-content>
         <ion-card-title>
-          Sachin T
+          3 T-shirts , 10 pants
         </ion-card-title>
+        <p><b> Available Date & Time: </b>15th Nov 2017, 3:30 - 4:30 PM</p>
         <p>
           I have cloths to donate, used cloths , need to collect from Swargate
         </p>
@@ -43,7 +44,8 @@
           <!-- <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon> -->
           <ion-icon name="create"></ion-icon>
           Address 
-          <ion-badge item-end>Hadapsar near magarpatta, Pune 40404</ion-badge>
+          <span style="    width: 60%;
+          text-align: right;" item-end>Hadapsar near magarpatta, Pune 40404</span>
         </ion-item>
 
 
@@ -52,13 +54,14 @@
           <ion-icon name="call"></ion-icon>
           
           Mobile 
-          <ion-badge item-end>+91-9767752773</ion-badge>
+          <span style="    width: 60%;
+          text-align: right;" item-end>+91-9767752773</span>
         </ion-item>
 
         
       <ion-item> 
-       <button ion-button>Accept</button>
-       <button ion-button color="danger">Decline</button>
+       <button ion-button (click)="acceptItem()">Accept</button>
+       <!-- <button ion-button color="danger">Decline</button> -->
       </ion-item>
   
     </ion-card>
